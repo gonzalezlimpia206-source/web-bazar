@@ -42,10 +42,19 @@
     </section>
 
     <!-- CATÁLOGO -->
+      <!-- CATÁLOGO -->
     <section id="catalogo" class="seccion">
       <div class="contenedor">
         <h2>Catálogo</h2>
-        <p>Aquí irán los productos.</p>
+        <p class="seccion__intro">Elegí una categoría y pedí tu producto directo por WhatsApp.</p>
+
+        <!-- Aquí JavaScript crea los botones de categorías -->
+        <div class="filtros" id="filtros"></div>
+
+        <!-- Aquí JavaScript crea las tarjetas de productos -->
+        <div class="rejilla" id="productos">
+          <p class="aviso">Cargando productos…</p>
+        </div>
       </div>
     </section>
 
@@ -123,5 +132,9 @@
     </svg>
   </a>
 
+    <!-- JAVASCRIPT: siempre al final, para que el HTML ya exista -->
+  <script src="js/catalogo.js"></script>
+
+  
 </body>
 </html>

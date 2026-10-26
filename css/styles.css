@@ -19,7 +19,7 @@
 
    --fuente-titulos: "Poppins", system-ui, sans-serif;
   --fuente-texto: "Inter", system-ui, sans-serif;
-  
+
   --radio: 10px;
   --ancho-max: 1100px;
 }
@@ -323,4 +323,120 @@ section {
 
 .whatsapp-flotante:hover {
   transform: scale(1.08);
+}
+
+/* =========================================================
+   LECCIÓN 4 — Catálogo de productos
+   ========================================================= */
+
+/* ---------- 16. Texto de introducción ---------- */
+.seccion__intro {
+  margin: 0 0 24px;
+  color: var(--texto-suave);
+}
+
+.aviso {
+  color: var(--texto-suave);
+}
+
+/* ---------- 17. Botones de categorías ---------- */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.filtro {
+  padding: 8px 18px;
+  border: 2px solid var(--borde);
+  border-radius: 999px;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.filtro:hover {
+  border-color: var(--verde);
+}
+
+.filtro--activo {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: #fff;
+}
+
+/* ---------- 18. Rejilla de productos ---------- */
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+/* ---------- 19. Tarjeta de producto ---------- */
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  background: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.tarjeta img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--fondo-alterno);
+}
+
+.tarjeta__cuerpo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  flex: 1;
+}
+
+.tarjeta__categoria {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--rojo);
+}
+
+.tarjeta__nombre {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.tarjeta__descripcion {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--texto-suave);
+}
+
+.tarjeta__precio {
+  margin: auto 0 0;
+  padding-top: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--verde);
+}
+
+.tarjeta__boton {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 0.95rem;
 }

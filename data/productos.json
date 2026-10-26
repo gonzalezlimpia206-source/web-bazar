@@ -1,0 +1,74 @@
+[
+  {
+    "codigo": "P001",
+    "nombre": "Juego de vasos de vidrio x6",
+    "categoria": "Bazar",
+    "precio": 45000,
+    "descripcion": "Vasos de 300 ml, aptos para lavavajillas.",
+    "foto": "p001.jpg",
+    "destacado": true
+  },
+  {
+    "codigo": "P002",
+    "nombre": "Táper hermético 1,5 L",
+    "categoria": "Bazar",
+    "precio": 18000,
+    "descripcion": "Plástico resistente con tapa de cierre.",
+    "foto": "p002.jpg",
+    "destacado": false
+  },
+  {
+    "codigo": "P003",
+    "nombre": "Globos de colores x50",
+    "categoria": "Cotillón",
+    "precio": 15000,
+    "descripcion": "Globos de látex surtidos para fiestas.",
+    "foto": "p003.jpg",
+    "destacado": true
+  },
+  {
+    "codigo": "P004",
+    "nombre": "Velas de cumpleaños con números",
+    "categoria": "Cotillón",
+    "precio": 8000,
+    "descripcion": "Número del 0 al 9, varios colores.",
+    "foto": "p004.jpg",
+    "destacado": false
+  },
+  {
+    "codigo": "P005",
+    "nombre": "Auto a fricción",
+    "categoria": "Juguetes",
+    "precio": 35000,
+    "descripcion": "Para niños desde 3 años.",
+    "foto": "p005.jpg",
+    "destacado": true
+  },
+  {
+    "codigo": "P006",
+    "nombre": "Muñeca con accesorios",
+    "categoria": "Juguetes",
+    "precio": 60000,
+    "descripcion": "Incluye ropa y peine.",
+    "foto": "p006.jpg",
+    "destacado": false
+  },
+  {
+    "codigo": "P007",
+    "nombre": "Taza decorada con caja",
+    "categoria": "Regalos",
+    "precio": 30000,
+    "descripcion": "Ideal para regalar, varios diseños.",
+    "foto": "p007.jpg",
+    "destacado": false
+  },
+  {
+    "codigo": "P008",
+    "nombre": "Peluche oso 30 cm",
+    "categoria": "Regalos",
+    "precio": 55000,
+    "descripcion": "Suave y lavable.",
+    "foto": "p008.jpg",
+    "destacado": true
+  }
+]
