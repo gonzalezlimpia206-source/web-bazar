@@ -17,9 +17,9 @@
   --fondo-alterno: #f3f8f1;  /* Blanco con un toque verde */
   --borde: #dfe6dc;
 
-  --fuente-titulos: "Fredoka", system-ui, sans-serif;
-  --fuente-texto: "Nunito", system-ui, sans-serif;
-
+   --fuente-titulos: "Poppins", system-ui, sans-serif;
+  --fuente-texto: "Inter", system-ui, sans-serif;
+  
   --radio: 10px;
   --ancho-max: 1100px;
 }
@@ -205,4 +205,122 @@ section {
   .portada {
     padding: 48px 0;
   }
+}
+/* =========================================================
+   LECCIÓN 3 — Ubicación, contacto y WhatsApp
+   ========================================================= */
+
+/* ---------- 10. Variantes de botón ---------- */
+.boton--secundario {
+  background: transparent;
+  color: var(--verde);
+  border: 2px solid var(--verde);
+}
+
+.boton--secundario:hover {
+  background: var(--verde);
+  color: #fff;
+}
+
+.boton--whatsapp {
+  background: #1fa855;   /* Verde propio de WhatsApp: la gente lo reconoce */
+}
+
+.boton--whatsapp:hover {
+  background: #178a45;
+}
+
+.boton--instagram {
+  background: #c13584;   /* Color característico de Instagram */
+}
+
+.boton--instagram:hover {
+  background: #9e2a6c;
+}
+
+/* ---------- 11. Dos columnas (texto + mapa) ---------- */
+.dos-columnas {
+  display: grid;
+  grid-template-columns: 1fr;   /* Móvil: una columna */
+  gap: 32px;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .dos-columnas {
+    grid-template-columns: 1fr 1fr;   /* Escritorio: dos columnas */
+  }
+}
+
+/* ---------- 12. Dirección y horario ---------- */
+.direccion {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.horario {
+  width: 100%;
+  max-width: 380px;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.horario th,
+.horario td {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--borde);
+  text-align: left;
+}
+
+.horario th {
+  font-weight: 600;
+}
+
+.horario td {
+  text-align: right;
+}
+
+/* ---------- 13. Mapa ---------- */
+.mapa {
+  border-radius: var(--radio);
+  overflow: hidden;
+  border: 4px solid var(--verde-claro);
+}
+
+.mapa iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
+}
+
+/* ---------- 14. Contacto ---------- */
+.contacto-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* ---------- 15. Botón flotante de WhatsApp ---------- */
+.whatsapp-flotante {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 20;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #1fa855;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s;
+}
+
+.whatsapp-flotante:hover {
+  transform: scale(1.08);
 }
