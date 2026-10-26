@@ -1,0 +1,208 @@
+/* =========================================================
+   MUNDO PLAST — Hoja de estilos
+   ========================================================= */
+
+/* ---------- 1. Variables: colores sacados del logo ---------- */
+:root {
+  --verde: #008a00;          /* Verde principal del logo */
+  --verde-oscuro: #006b00;   /* Para el pie de página */
+  --verde-claro: #8fd80c;    /* Verde lima del borde del logo */
+  --rojo: #e30000;           /* Rojo de "Mundo Plast" */
+  --rojo-oscuro: #b80000;    /* Para pasar el ratón por encima */
+  --amarillo: #ffd400;       /* Amarillo del corazón de la "M" */
+
+  --texto: #1d232a;
+  --texto-suave: #5b6672;
+  --fondo: #ffffff;
+  --fondo-alterno: #f3f8f1;  /* Blanco con un toque verde */
+  --borde: #dfe6dc;
+
+  --fuente-titulos: "Fredoka", system-ui, sans-serif;
+  --fuente-texto: "Nunito", system-ui, sans-serif;
+
+  --radio: 10px;
+  --ancho-max: 1100px;
+}
+
+/* ---------- 2. Reset básico ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--fondo);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulos);
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+/* Hace que el menú baje suave hasta cada sección */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Deja hueco para la cabecera fija al saltar a una sección */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* ---------- 3. Contenedor: centra el contenido ---------- */
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ---------- 4. Cabecera ---------- */
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--fondo);
+  border-bottom: 4px solid var(--verde-claro);
+}
+
+.cabecera__fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 16px;
+}
+
+.marca img {
+  height: 60px;
+  width: auto;
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+}
+
+.menu a {
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--verde);
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: var(--rojo);
+}
+
+/* ---------- 5. Botón ---------- */
+.boton {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: var(--radio);
+  background: var(--rojo);
+  color: #fff;
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.boton:hover {
+  background: var(--rojo-oscuro);
+}
+
+/* ---------- 6. Portada ---------- */
+.portada {
+  background: var(--verde);
+  color: #fff;
+  padding: 72px 0;
+  border-bottom: 8px solid var(--rojo);
+}
+
+.portada__etiqueta {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: var(--amarillo);
+  color: var(--texto);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.portada h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  max-width: 700px;
+}
+
+.portada__texto {
+  font-size: 1.15rem;
+  margin: 0 0 28px;
+  max-width: 560px;
+}
+
+/* ---------- 7. Secciones ---------- */
+.seccion {
+  padding: 64px 0;
+}
+
+.seccion--alterna {
+  background: var(--fondo-alterno);
+}
+
+.seccion h2 {
+  font-size: 2rem;
+  color: var(--verde);
+  border-left: 6px solid var(--rojo);
+  padding-left: 12px;
+}
+
+/* ---------- 8. Pie de página ---------- */
+.pie {
+  background: var(--verde-oscuro);
+  color: #e8f3e6;
+  padding: 32px 0;
+  font-size: 0.95rem;
+}
+
+.pie p {
+  margin: 4px 0;
+}
+
+/* ---------- 9. Móvil (pantallas de 600px o menos) ---------- */
+@media (max-width: 600px) {
+  .cabecera__fila {
+    min-height: 64px;
+  }
+
+  .marca img {
+    height: 48px;
+  }
+
+  .menu {
+    gap: 14px;
+  }
+
+  .menu a {
+    font-size: 0.95rem;
+  }
+
+  .portada {
+    padding: 48px 0;
+  }
+}
